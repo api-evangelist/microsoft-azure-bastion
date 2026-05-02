@@ -1,5 +1,18 @@
 aid: microsoft-azure-bastion
+name: Azure Bastion
+description: >-
+  Learn more about [Virtual Networks Bastion Hosts Operations]. How to [Create Or
+  Update,Delete,Get,List,List By Resource Group,Update Tags].
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-bastion/refs/heads/main/apis.yml
+created: '2026-03-13'
+modified: '2026-04-28'
+tags:
+  - Bastion
+  - RDP
+  - Remote Access
+  - Secure Access
+  - SSH
 apis:
   - aid: microsoft-azure-bastion:rest-api
     name: Azure Bastion REST API
@@ -30,10 +43,6 @@ common:
     url: https://privacy.microsoft.com/en-us/privacystatement
   - type: Support
     url: https://support.microsoft.com/
-modified: '2026-03-16'
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
-description: >-
-  Learn more about [Virtual Networks Bastion Hosts Operations]. How to [Create Or
-  Update,Delete,Get,List,List By Resource Group,Update Tags].
