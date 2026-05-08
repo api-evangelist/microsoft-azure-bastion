@@ -26,6 +26,8 @@ apis:
     baseURL: https://management.azure.com/
     humanURL: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts
     properties:
+      - url: openapi/microsoft-azure-bastion-openapi.yml
+        type: OpenAPI
       - url: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts
         type: Documentation
     description: >-
