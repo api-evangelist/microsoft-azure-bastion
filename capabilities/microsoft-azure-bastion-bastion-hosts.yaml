@@ -1,0 +1,229 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Azure Bastion REST API — Bastion Hosts
+  description: 'Azure Bastion REST API — Bastion Hosts. 6 operations. Lead operation: Azure Bastion REST API List by subscription.
+    Self-contained Naftiko capability covering one Microsoft Azure Bastion business surface.'
+  tags:
+  - Microsoft Azure Bastion
+  - Bastion Hosts
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    MICROSOFT_AZURE_BASTION_API_KEY: MICROSOFT_AZURE_BASTION_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: microsoft-azure-bastion-bastion-hosts
+    baseUri: https://management.azure.com
+    description: Azure Bastion REST API — Bastion Hosts business capability. Self-contained, no shared references.
+    resources:
+    - name: subscriptions-subscriptionId-providers-Microsoft.Network-bastionHosts
+      path: /subscriptions/{subscriptionId}/providers/Microsoft.Network/bastionHosts
+      operations:
+      - name: listbastionhostsbysubscription
+        method: GET
+        description: Azure Bastion REST API List by subscription
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof
+      path: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts
+      operations:
+      - name: listbastionhostsbyresourcegroup
+        method: GET
+        description: Azure Bastion REST API List by resource group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof
+      path: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{name}
+      operations:
+      - name: getbastionhosts
+        method: GET
+        description: Azure Bastion REST API Get resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createorupdatebastionhosts
+        method: PUT
+        description: Azure Bastion REST API Create or update resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: updatebastionhosts
+        method: PATCH
+        description: Azure Bastion REST API Update resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deletebastionhosts
+        method: DELETE
+        description: Azure Bastion REST API Delete resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.MICROSOFT_AZURE_BASTION_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: microsoft-azure-bastion-bastion-hosts-rest
+    port: 8080
+    description: REST adapter for Azure Bastion REST API — Bastion Hosts. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/subscriptions/{subscriptionid}/providers/microsoft-network/bastionhosts
+      name: subscriptions-subscriptionid-providers-microsoft-network-bastionhosts
+      description: REST surface for subscriptions-subscriptionId-providers-Microsoft.Network-bastionHosts.
+      operations:
+      - method: GET
+        name: listbastionhostsbysubscription
+        description: Azure Bastion REST API List by subscription
+        call: microsoft-azure-bastion-bastion-hosts.listbastionhostsbysubscription
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft-network/bastionhosts
+      name: subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsof
+      description: REST surface for subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof.
+      operations:
+      - method: GET
+        name: listbastionhostsbyresourcegroup
+        description: Azure Bastion REST API List by resource group
+        call: microsoft-azure-bastion-bastion-hosts.listbastionhostsbyresourcegroup
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft-network/bastionhosts/{name}
+      name: subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsof
+      description: REST surface for subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof.
+      operations:
+      - method: GET
+        name: getbastionhosts
+        description: Azure Bastion REST API Get resource
+        call: microsoft-azure-bastion-bastion-hosts.getbastionhosts
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: createorupdatebastionhosts
+        description: Azure Bastion REST API Create or update resource
+        call: microsoft-azure-bastion-bastion-hosts.createorupdatebastionhosts
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updatebastionhosts
+        description: Azure Bastion REST API Update resource
+        call: microsoft-azure-bastion-bastion-hosts.updatebastionhosts
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletebastionhosts
+        description: Azure Bastion REST API Delete resource
+        call: microsoft-azure-bastion-bastion-hosts.deletebastionhosts
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: microsoft-azure-bastion-bastion-hosts-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Azure Bastion REST API — Bastion Hosts. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: azure-bastion-rest-api-list
+      description: Azure Bastion REST API List by subscription
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-bastion-bastion-hosts.listbastionhostsbysubscription
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: azure-bastion-rest-api-list-2
+      description: Azure Bastion REST API List by resource group
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-bastion-bastion-hosts.listbastionhostsbyresourcegroup
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: azure-bastion-rest-api-get
+      description: Azure Bastion REST API Get resource
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-bastion-bastion-hosts.getbastionhosts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: azure-bastion-rest-api-create
+      description: Azure Bastion REST API Create or update resource
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-bastion-bastion-hosts.createorupdatebastionhosts
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: azure-bastion-rest-api-update
+      description: Azure Bastion REST API Update resource
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-bastion-bastion-hosts.updatebastionhosts
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: azure-bastion-rest-api-delete
+      description: Azure Bastion REST API Delete resource
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: microsoft-azure-bastion-bastion-hosts.deletebastionhosts
+      outputParameters:
+      - type: object
+        mapping: $.
