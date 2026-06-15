@@ -1,6 +1,7 @@
 aid: microsoft-azure-bastion
 name: Azure Bastion
-description: Learn more about [Virtual Networks Bastion Hosts Operations]. How to [Create Or Update,Delete,Get,List,List By
+description: >-
+  Learn more about [Virtual Networks Bastion Hosts Operations]. How to [Create Or Update,Delete,Get,List,List By
   Resource Group,Update Tags].
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-bastion/refs/heads/main/apis.yml
@@ -16,24 +17,21 @@ apis:
   - aid: microsoft-azure-bastion:rest-api
     name: Azure Bastion REST API
     tags:
-    - Bastion
-    - RDP
-    - Remote Access
-    - Secure Access
-    - SSH
+      - Bastion
+      - RDP
+      - Remote Access
+      - Secure Access
+      - SSH
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://management.azure.com/
     humanURL: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts
     properties:
-    - url: openapi/microsoft-azure-bastion-openapi.yml
-      type: OpenAPI
-    - url: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts
-      type: Documentation
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-bastion-bastion-hosts.yaml
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-bastion-operations.yaml
-    description: Azure Bastion REST API enables management of fully managed PaaS service for secure RDP and SSH access to virtual
+      - url: openapi/microsoft-azure-bastion-openapi.yml
+        type: OpenAPI
+      - url: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts
+        type: Documentation
+    description: >-
+      Azure Bastion REST API enables management of fully managed PaaS service for secure RDP and SSH access to virtual
       machines directly through the Azure portal without exposing public IP addresses.
 common:
   - type: GitHubOrganization
