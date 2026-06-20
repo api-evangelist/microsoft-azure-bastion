@@ -3,7 +3,7 @@ name: Azure Bastion
 description: >-
   Learn more about [Virtual Networks Bastion Hosts Operations]. How to [Create Or Update,Delete,Get,List,List By
   Resource Group,Update Tags].
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-bastion/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -22,7 +22,7 @@ apis:
       - Remote Access
       - Secure Access
       - SSH
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://management.azure.com/
     humanURL: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts
     properties:
