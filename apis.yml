@@ -34,6 +34,10 @@ apis:
       Azure Bastion REST API enables management of fully managed PaaS service for secure RDP and SSH access to virtual
       machines directly through the Azure portal without exposing public IP addresses.
 common:
+  - type: DomainSecurity
+    url: security/microsoft-azure-bastion-domain-security.yml
+  - type: Authentication
+    url: authentication/microsoft-azure-bastion-authentication.yml
   - type: OAuthScopes
     url: scopes/microsoft-azure-bastion-scopes.yml
   - type: GitHubOrganization
