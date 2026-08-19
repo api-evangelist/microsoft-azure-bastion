@@ -3,6 +3,7 @@ name: Azure Bastion
 description: >-
   Learn more about [Virtual Networks Bastion Hosts Operations]. How to [Create Or Update,Delete,Get,List,List By
   Resource Group,Update Tags].
+specificationVersion: '0.23'
 accessModel:
   pricing: freemium
   onboarding: self-serve
