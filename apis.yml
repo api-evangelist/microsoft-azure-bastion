@@ -66,6 +66,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts
 common:
+  - type: Website
+    url: https://www.microsoft.com/
   - type: AgenticAccess
     url: agentic-access/microsoft-azure-bastion-agentic-access.yml
   - type: DomainSecurity
@@ -93,3 +95,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: microsoft-azure
+x-relationship: product
