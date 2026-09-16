@@ -1,8 +1,7 @@
 aid: microsoft-azure-bastion
 name: Azure Bastion
-description: >-
-  Learn more about [Virtual Networks Bastion Hosts Operations]. How to [Create Or Update,Delete,Get,List,List By
-  Resource Group,Update Tags].
+description: Learn more about [Virtual Networks Bastion Hosts Operations]. How to [Create Or Update,Delete,Get,List,List
+  By Resource Group,Update Tags].
 deliveryModel:
   model: saas
   open_source: false
@@ -32,16 +31,16 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-azure-bastion.png
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-bastion/refs/heads/main/apis.yml
 created: '2026-03-13'
-modified: '2026-05-19'
+modified: '2026-09-16'
 tags:
-  - Bastion
-  - RDP
-  - Remote Access
-  - Secure Access
-  - SSH
+- Bastion
+- RDP
+- Remote Access
+- Secure Access
+- SSH
 apis:
 - aid: microsoft-azure-bastion:microsoft-azure-bastion-bastion-hosts-api
-  name: Azure Bastion Bastion Hosts API
+  name: Azure Bastion Hosts API
   description: Bastion Hosts operations
   humanURL: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts
   baseURL: https://management.azure.com/
@@ -66,34 +65,34 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts
 common:
-  - type: Website
-    url: https://www.microsoft.com/
-  - type: AgenticAccess
-    url: agentic-access/microsoft-azure-bastion-agentic-access.yml
-  - type: DomainSecurity
-    url: security/microsoft-azure-bastion-domain-security.yml
-  - type: Authentication
-    url: authentication/microsoft-azure-bastion-authentication.yml
-  - type: OAuthScopes
-    url: scopes/microsoft-azure-bastion-scopes.yml
-  - type: GitHubOrganization
-    url: https://github.com/Azure
-  - type: Portal
-    url: https://portal.azure.com/
-  - type: Pricing
-    url: https://azure.microsoft.com/en-us/pricing/
-  - type: TermsOfService
-    url: https://www.microsoft.com/en-us/legal/terms-of-use
-  - type: PrivacyPolicy
-    url: https://privacy.microsoft.com/en-us/privacystatement
-  - type: Support
-    url: https://support.microsoft.com/
-  - type: LlmsText
-    url: https://portal.azure.com/llms.txt
-  - url: https://azure.microsoft.com/en-us/blog/feed/
-    type: Blog
+- type: Website
+  url: https://www.microsoft.com/
+- type: AgenticAccess
+  url: agentic-access/microsoft-azure-bastion-agentic-access.yml
+- type: DomainSecurity
+  url: security/microsoft-azure-bastion-domain-security.yml
+- type: Authentication
+  url: authentication/microsoft-azure-bastion-authentication.yml
+- type: OAuthScopes
+  url: scopes/microsoft-azure-bastion-scopes.yml
+- type: GitHubOrganization
+  url: https://github.com/Azure
+- type: Portal
+  url: https://portal.azure.com/
+- type: Pricing
+  url: https://azure.microsoft.com/en-us/pricing/
+- type: TermsOfService
+  url: https://www.microsoft.com/en-us/legal/terms-of-use
+- type: PrivacyPolicy
+  url: https://privacy.microsoft.com/en-us/privacystatement
+- type: Support
+  url: https://support.microsoft.com/
+- type: LlmsText
+  url: https://portal.azure.com/llms.txt
+- url: https://azure.microsoft.com/en-us/blog/feed/
+  type: Blog
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 x-parent: microsoft-azure
 x-relationship: product
