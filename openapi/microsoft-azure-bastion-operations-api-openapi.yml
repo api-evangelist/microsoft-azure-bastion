@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Azure Bastion REST Bastion Hosts Operations API
+  title: Azure Bastion REST Operations API
   description: Azure Bastion provides secure RDP and SSH access to virtual machines through the Azure portal without exposing public IPs. The REST API manages bastion hosts and configuration.
   version: '2024-01-01'
 servers:
@@ -36,14 +36,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
-  parameters:
-    apiVersion:
-      name: api-version
-      in: query
-      required: true
-      description: The API version to use for this operation.
-      schema:
-        type: string
   schemas:
     Operation:
       type: object
@@ -63,15 +55,6 @@ components:
               type: string
         isDataAction:
           type: boolean
-    OperationList:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/Operation'
-        nextLink:
-          type: string
     ErrorResponse:
       type: object
       properties:
@@ -84,6 +67,23 @@ components:
               type: string
             target:
               type: string
+    OperationList:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Operation'
+        nextLink:
+          type: string
+  parameters:
+    apiVersion:
+      name: api-version
+      in: query
+      required: true
+      description: The API version to use for this operation.
+      schema:
+        type: string
   securitySchemes:
     azure_auth:
       type: oauth2
