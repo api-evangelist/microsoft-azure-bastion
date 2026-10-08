@@ -65,6 +65,12 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts
 common:
+- type: Plans
+  url: plans/microsoft-azure-bastion-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/microsoft-azure-bastion-rate-limits.yml
+- type: FinOps
+  url: finops/microsoft-azure-bastion-finops.yml
 - type: Website
   url: https://www.microsoft.com/
 - type: AgenticAccess
