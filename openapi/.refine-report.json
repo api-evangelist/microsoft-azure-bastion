@@ -1,9 +1,11 @@
 {
   "provider": "microsoft-azure-bastion",
   "sources": [
+    "_original/microsoft-azure-bastion-openapi.json",
     "_ae-authored/microsoft-azure-bastion-openapi.yml"
   ],
   "outputs": [
+    "microsoft-azure-bastion-webapps-api-openapi.yml",
     "microsoft-azure-bastion-bastion-hosts-api-openapi.yml",
     "microsoft-azure-bastion-operations-api-openapi.yml"
   ],
@@ -11,9 +13,11 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "microsoft-azure-bastion-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "microsoft-azure-bastion-openapi.json: declared missing tag: WebApps",
     "microsoft-azure-bastion-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "apis.yml register: written (+1 apis, 3 total)"
   ],
   "skipped": [
     "microsoft-azure-bastion-bastion-hosts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
