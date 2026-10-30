@@ -1,4 +1,4 @@
-# Azure Bastion (microsoft-azure-bastion)
+# Azure Bastion
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,56 +66,127 @@
 
 Learn more about [Virtual Networks Bastion Hosts Operations]. How to [Create Or Update,Delete,Get,List,List By Resource Group,Update Tags].
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/microsoft-azure-bastion/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/microsoft-azure-bastion/refs/heads/main/apis.yml)
+**Areas:** Bastion · RDP · Remote Access · Secure Access · SSH
 
-## Tags
+## Azure Bastion on APIs.io
 
-- Bastion
-- RDP
-- Remote Access
-- Secure Access
-- SSH
+Everything profiled for Azure Bastion is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/microsoft-azure-bastion/](https://apis.io/providers/microsoft-azure-bastion/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (2)
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+- [Azure Bastion Hosts API](https://apis.io/apis/microsoft-azure-bastion/microsoft-azure-bastion-bastion-hosts-api/) — Bastion Hosts operations
+- [Azure Bastion Operations API](https://apis.io/apis/microsoft-azure-bastion/microsoft-azure-bastion-operations-api/) — Operations operations
 
-## APIs
+### Published properties
 
-### Azure Bastion REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Azure Bastion REST API enables management of fully managed PaaS service for secure RDP and SSH access to virtual machines directly through the Azure portal without exposing public IP addresses.
+#### Agentic access (1)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts](https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts)
-- **Base URL:** `https://management.azure.com/`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Microsoft Azure Bastion Agentic Access](https://apis.io/agentic-access/microsoft-azure-bastion/microsoft-azure-bastion-agentic-access/)
 
-- Bastion
-- RDP
-- Remote Access
-- Secure Access
-- SSH
+#### Collections (3)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [OpenAPI](openapi/microsoft-azure-bastion-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/microsoft-azure-bastion.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-bastion.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/virtualnetwork/bastion-hosts)
+- [Azure Bastion REST API](https://apis.io/collections/microsoft-azure-bastion/open-microsoft-azure-bastion/)
+- [Azure Bastion REST Bastion Hosts API](https://apis.io/collections/microsoft-azure-bastion/open-microsoft-azure-bastion-bastion-hosts-api/)
+- [Azure Bastion REST Bastion Hosts Operations API](https://apis.io/collections/microsoft-azure-bastion/open-microsoft-azure-bastion-operations-api/)
 
-## Common Properties
+#### Security (2)
 
-- [GitHub Organization](https://github.com/Azure)
-- [Portal](https://portal.azure.com/)
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Microsoft Azure Bastion Authentication](https://apis.io/security/microsoft-azure-bastion/microsoft-azure-bastion-authentication/)
+- [Microsoft Azure Bastion Domain Security](https://apis.io/security/microsoft-azure-bastion/microsoft-azure-bastion-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Microsoft Azure Bastion Scopes](https://apis.io/scopes/microsoft-azure-bastion/microsoft-azure-bastion-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Microsoft Azure Bastion Plans Pricing](https://apis.io/plans/microsoft-azure-bastion/microsoft-azure-bastion-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Microsoft Azure Bastion Rate Limits](https://apis.io/rate-limits/microsoft-azure-bastion/microsoft-azure-bastion-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Microsoft Azure Bastion Finops](https://apis.io/finops/microsoft-azure-bastion/microsoft-azure-bastion-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.microsoft.com/)
 - [Pricing](https://azure.microsoft.com/en-us/pricing/)
-- [Terms of Service](https://www.microsoft.com/en-us/legal/terms-of-use)
-- [Privacy Policy](https://privacy.microsoft.com/en-us/privacystatement)
 - [Support](https://support.microsoft.com/)
-- [L L Ms Txt](https://portal.azure.com/llms.txt)
+- [Blog](https://azure.microsoft.com/en-us/blog/feed/)
+- [Terms of service](https://www.microsoft.com/en-us/legal/terms-of-use)
+- [Privacy policy](https://privacy.microsoft.com/en-us/privacystatement)
+- [GitHub](https://github.com/Azure)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 38.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 44.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 39.5 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/microsoft-azure-bastion/](https://apis.io/providers/microsoft-azure-bastion/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Azure Bastion: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/microsoft-azure-bastion/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
